@@ -26,10 +26,13 @@ public class MembreServiceApplication  {
 
 
 	/* salem*/
+<<<<<<< HEAD
 	/* salem branche test*/
 	/* bch nahy commit*/
 
 
+=======
+>>>>>>> parent of 3545d1a (zedt file)
 
 
 }
