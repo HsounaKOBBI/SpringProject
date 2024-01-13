@@ -1,0 +1,5 @@
+com\example\Membre_service\model\Membre_Pub_Id.class
+com\example\Membre_service\proxies\PublicationProxyService.class
+com\example\Membre_service\model\Membre_Publication.class
+com\example\Membre_service\Bean\PublicationBean.class
+com\example\Membre_service\repository\MembrePubRepository.class

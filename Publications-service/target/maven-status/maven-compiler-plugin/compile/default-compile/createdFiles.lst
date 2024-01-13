@@ -1,0 +1,7 @@
+com\example\publicationsservice\service\IPublicationService.class
+com\example\publicationsservice\controller\PublicationRestController.class
+com\example\publicationsservice\service\PublicationImpl.class
+com\example\publicationsservice\dao\PublicationRepository.class
+com\example\publicationsservice\PublicationsServiceApplication.class
+com\example\publicationsservice\entity\Publication.class
+com\example\publicationsservice\entity\Publication$PublicationBuilder.class
