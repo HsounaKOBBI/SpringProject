@@ -1,5 +1,6 @@
 package com.example.Membre_service.service;
 
+import com.example.Membre_service.Bean.PublicationBean;
 import com.example.Membre_service.model.EnseignantChercheur;
 import com.example.Membre_service.model.Etudiant;
 import com.example.Membre_service.model.Membre;
@@ -24,4 +25,12 @@ public interface IMemberService {
     public void AffecterEtudiantToEnseignant(Long idEtd ,Long idEns);
     public void findAllEtudiantByEncadrant(Long idEns);
 
+    public List<Etudiant> findEtudiantsEncadresParEnseignant(Long idEns);
+
+    public void affecterEtudianttoEnseignantChercheur(Long idEtud,Long idEns);
+
+
+    public void affecterauteurTopublication(Long idauteur, Long idpub);
+    public List<PublicationBean>
+    findPublicationparauteur (Long idauteur);
 }

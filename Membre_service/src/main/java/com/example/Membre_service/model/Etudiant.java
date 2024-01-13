@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @DiscriminatorValue("etd")
-public class Etudiant extends   Membre{
+public class Etudiant extends  Membre{
     private Date dateInscription;
     private String diplome;
     private String sujet;
@@ -23,7 +23,7 @@ public class Etudiant extends   Membre{
     @Builder
     public Etudiant(  String cin,  String nom,  String prenom,
                      Date dateNaissance,
-                      Date dateInscription,  String diplome,  String sujet,
+                      Date dateInscription, String type_mbr ,String diplome,  String sujet,
                     EnseignantChercheur encadrant) {
         super(cin, nom, prenom, dateNaissance);
         this.dateInscription = dateInscription;

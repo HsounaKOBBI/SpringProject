@@ -1,45 +1,53 @@
 package com.example.publicationsservice.entity;
 
+import java.util.Date;
+
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.DiscriminatorType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.*;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-import java.util.Date;
-
+@Data
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor(force = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Publication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NonNull
+    @Nonnull
     private String type;
-
-    @NonNull
+    @Nonnull
     private String titre;
-
-    @NonNull
+    @Nonnull
     private String lien;
-
-    @NonNull
+    @Nonnull
+    @Temporal(TemporalType.DATE)
     private Date date;
-
-    @NonNull
+    @Nonnull
     private String sourcepdf;
 
     @Builder
-
-    public Publication(Long id, @NonNull String type, @NonNull String titre, @NonNull String lien, @NonNull Date date, @NonNull String sourcepdf) {
-        this.id = id;
-        this.type = type;
-        this.titre = titre;
-        this.lien = lien;
+    public Publication(String type, Date date, String titre, String lien, String sourcepdf) {
         this.date = date;
-        this.sourcepdf = sourcepdf;
+        this.lien=lien;
+        this.titre= titre;
+        this.type=type;
+        this.sourcepdf=sourcepdf;
     }
+
 }

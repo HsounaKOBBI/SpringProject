@@ -1,9 +1,11 @@
 package com.example.Membre_service.model;
 
+import com.example.Membre_service.Bean.PublicationBean;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 
@@ -32,4 +34,10 @@ public abstract class Membre implements Serializable {
     private String cv;
     private  String email;
     private String password;
+    @Column(insertable=false, updatable=false)
+    private String type_mbr;
+
+
+    @Transient
+    Collection<PublicationBean> pubs;
 }

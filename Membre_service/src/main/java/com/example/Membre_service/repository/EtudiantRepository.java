@@ -8,4 +8,7 @@ import java.util.List;
 
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
     public List<Etudiant> findEtudiantByEncadrant(EnseignantChercheur enseignantChercheur);
+
+    List<Etudiant> findByEncadrant(EnseignantChercheur encadrant);
+
 }

@@ -68,4 +68,14 @@ public class MemberController {
         return membreService.updateMember(p);
 
     }
+
+    @GetMapping("/fullmember/{id}")
+    public Membre findAFullMember(@PathVariable(name="id") Long id)
+    {
+
+        Membre mbr=membreService.findMember(id);
+        mbr.setPubs(membreService.findPublicationparauteur(id));
+
+        return mbr;
+    }
 }

@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="EurekaServer" />
+        <module name="ServiceGateway" />
+        <module name="Evenement-service (1)" />
+        <module name="Evenement-service (2)" />
         <module name="Membre_service" />
         <module name="Publications-service" />
         <module name="ConfigServer" />
-        <module name="Evenement-service (1)" />
-        <module name="Evenement-service (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +30,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ConfigServer" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
       <module name="Evenement-service" options="-parameters" />
       <module name="Evenement-service (1)" options="-parameters" />
       <module name="Evenement-service (2)" options="-parameters" />
@@ -37,6 +40,7 @@
       <module name="Outil_service" options="-parameters" />
       <module name="Publication_service" options="-parameters" />
       <module name="Publications-service" options="-parameters" />
+      <module name="ServiceGateway" options="-parameters" />
       <module name="configServer" options="-parameters" />
       <module name="k" options="-parameters" />
       <module name="l" options="-parameters" />

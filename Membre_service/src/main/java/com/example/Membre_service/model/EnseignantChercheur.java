@@ -24,9 +24,9 @@ public class EnseignantChercheur extends   Membre{
     private List<Etudiant> etudiant;
     @Builder
     public EnseignantChercheur(Long id,  String cin,  String nom,  String prenom,
-                    Date dateNaissance, byte[] photo,  String cv,  String email,  String password,
+                    Date dateNaissance, byte[] photo,  String cv,  String email,String type_mbr,  String password,
                     String etablissement,  String grad) {
-        super(id, cin, nom, prenom, dateNaissance, photo,cv, email, password);
+        super(id, cin, nom, prenom, dateNaissance, photo,cv, email, password,type_mbr,null);
         this.etablissement = etablissement;
         this.grad = grad;
             }
